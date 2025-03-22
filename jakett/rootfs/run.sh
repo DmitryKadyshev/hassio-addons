@@ -1,7 +1,6 @@
 #!/usr/bin/env bashio
 declare port
-declare certfile
-declare hassio_dns
+declare admin_password
 declare black_hole
 WAIT_PIDS=()
 

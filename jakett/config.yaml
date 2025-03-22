@@ -18,7 +18,7 @@ schema:
   black_hole: str
   admin_password: password
 ports: 
-  9117/tcp: null  
+  9117/tcp: 9117  
 ports_description:
   9117/tcp: "WEB Config"
 map:
