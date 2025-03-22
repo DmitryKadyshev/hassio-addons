@@ -28,7 +28,7 @@ bashio::log.info "starting jackett"
 
 cd /opt/Jackett || bashio::exit.nok "setup gone wrong!"
 
-exec ./jackett --NoUpdates &
+exec ./jackett -d /config --NoUpdates &
 WAIT_PIDS+=($!)
 
 function stop_addon() {
