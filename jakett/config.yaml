@@ -1,7 +1,7 @@
 name: Jackett
 version: "v0.22.1675"
 slug: hassio_jackett
-image: "dkadyshev/{arch}-hassio-jackett"
+# image: "dkadyshev/{arch}-hassio-jackett"
 description: An addon to add jackett to hassio
 startup: application
 boot: auto
