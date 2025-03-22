@@ -9,7 +9,7 @@ ARG JACKETT_RELEASE
 
 ENV XDG_CONFIG_HOME="/config"
 
-RUN useradd -m -s /bin/bash appuser
+# RUN useradd -m -s /bin/bash appuser
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -42,7 +42,7 @@ RUN apt-get update \
  COPY rootfs /
  RUN chmod a+x /run.sh
 
- USER appuser
+#  USER appuser
 
  CMD [ "/run.sh" ]
 
