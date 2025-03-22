@@ -12,6 +12,7 @@ if ! bashio::fs.directory_exists '/config/jackett'; then
 fi
 
 black_hole=$(bashio::config 'black_hole')
+admin_password=$(bashio::config 'admin_password')
 
 bashio::log.info "Black hole: ${black_hole}"
 
@@ -24,6 +25,7 @@ mv /Jackett/ServerConfig.json /config/Jackett/ServerConfig.json || bashio::exit.
 sed -i "s#%%black_hole%%#${black_hole}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in blackhole sed"
 
 sed -i "s#%%admin_password%%#${admin_password}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in port sed"
+
 
 cd /opt/Jackett || bashio::exit.nok "setup gone wrong!"
 
