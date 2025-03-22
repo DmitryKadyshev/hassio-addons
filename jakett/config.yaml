@@ -1,7 +1,6 @@
 name: Jackett
 version: "v0.22.1675"
 slug: hassio_jackett
-# image: "dkadyshev/{arch}-hassio-jackett"
 description: An addon to add jackett to hassio
 startup: application
 boot: auto
@@ -14,14 +13,9 @@ arch:
   - amd64
   - i386
 init: false
-schema:
-  black_hole: str
-  admin_password: password
 ports: 
   9117/tcp: 9117  
 ports_description:
   9117/tcp: "WEB Config"
 map:
-  - config:rw
-  - share:rw
-  - ssl
+  - addon_config:rw

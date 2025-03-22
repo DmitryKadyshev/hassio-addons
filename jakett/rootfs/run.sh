@@ -1,30 +1,29 @@
 #!/usr/bin/env bashio
-declare port
-declare admin_password
-declare black_hole
+# declare port
+# declare admin_password
+# declare black_hole
 WAIT_PIDS=()
 
 bashio::log.info "starting jackett"
 
-if ! bashio::fs.directory_exists '/config/jackett'; then
-	mkdir -p /config/Jackett || bashio::exit.nok "error in folder creation"
-	mkdir -p /share/Jackett || bashio::exit.nok "error in folder creation 2"
-fi
+# if ! bashio::fs.directory_exists '/config/jackett'; then
+# 	mkdir -p /config/Jackett || bashio::exit.nok "error in folder creation"
+# fi
 
-black_hole=$(bashio::config 'black_hole')
-admin_password=$(bashio::config 'admin_password')
+# black_hole=$(bashio::config 'black_hole')
+# admin_password=$(bashio::config 'admin_password')
 
-bashio::log.info "Black hole: ${black_hole}"
+# bashio::log.info "Black hole: ${black_hole}"
 
-if ! bashio::fs.directory_exists "${black_hole}"; then
-	mkdir -p $black_hole || bashio::exit.nok "error in folder creation 3"
-fi
+# if ! bashio::fs.directory_exists "${black_hole}"; then
+# 	mkdir -p $black_hole || bashio::exit.nok "error in folder creation 3"
+# fi
 
-mv /Jackett/ServerConfig.json /config/Jackett/ServerConfig.json || bashio::exit.nok "error in config move"
+# mv /Jackett/ServerConfig.json /config/Jackett/ServerConfig.json || bashio::exit.nok "error in config move"
 
-sed -i "s#%%black_hole%%#${black_hole}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in blackhole sed"
+# sed -i "s#%%black_hole%%#${black_hole}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in blackhole sed"
 
-sed -i "s#%%admin_password%%#${admin_password}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in port sed"
+# sed -i "s#%%admin_password%%#${admin_password}#g" /config/Jackett/ServerConfig.json || bashio::exit.nok "error in port sed"
 
 
 cd /opt/Jackett || bashio::exit.nok "setup gone wrong!"
