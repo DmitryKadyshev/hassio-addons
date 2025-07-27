@@ -1,4 +1,0 @@
-[submodule "radarr"]
-	path = addon-radarr
-	url = https://github.com/DmitryKadyshev/addon-radarr.git
-	branch = main
