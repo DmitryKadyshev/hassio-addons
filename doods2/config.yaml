@@ -1,0 +1,100 @@
+name: DOODS2
+version: '1'
+slug: doods2
+url: https://github.com/snowzach/hassio-addons/tree/master/doods2
+description: DOODS V2 Object Detection API - Common Compute Support
+webui: http://[HOST]:[PORT:8080]
+arch:
+- armhf
+- armv7
+- aarch64
+- amd64
+startup: services
+map:
+- share
+usb: true
+devices:
+  - /dev/dri/renderD128
+  - /dev/apex_0
+  - /dev/apex_1
+  - /dev/apex_2
+  - /dev/apex_3
+  - /dev/dri/card0
+  - /dev/vchiq
+  - /dev/video10
+  - /dev/video0
+options:
+  logger:
+    level: info
+  server:
+    port: '8080'
+    auth_key: ''
+  doods.log: detections
+  doods.boxes:
+    enabled: true
+    boxColor: "#00ff00"
+    boxThickness: 1
+    fontScale: 1.2
+    fontColor: "#00ff00"
+    fontThickness: 1
+  doods.regions:
+    enabled: true
+    boxColor: "#ff00ff"
+    boxThickness: 1
+    fontScale: 1.2
+    fontColor: "#ff00ff"
+    fontThickness: 1
+  doods.globals:
+    enabled: true
+    fontScale: 1.2
+    fontColor: "#ffff00"
+    fontThickness: 1
+  doods.detectors:
+    - name: default
+      type: tflite
+      modelFile: models/coco_ssd_mobilenet_v1_1.0_quant.tflite
+      labelFile: models/coco_labels0.txt
+    - name: tensorflow
+      type: tensorflow
+      modelFile: models/faster_rcnn_inception_v2_coco_2018_01_28.pb
+      labelFile: models/coco_labels1.txt
+    - name: pytorch
+      type: pytorch
+      modelFile: ultralytics/yolov5,yolov5s
+schema:
+  logger:
+    level: str?
+  server:
+    port: port?
+    auth_key: str?
+  doods.log: str?
+  doods.boxes:
+    enabled: bool
+    boxColor: str
+    boxThickness: float
+    fontScale: float
+    fontColor: str
+    fontThickness: float
+  doods.regions:
+    enabled: bool
+    boxColor: str
+    boxThickness: float
+    fontScale: float
+    fontColor: str
+    fontThickness: float
+  doods.globals:
+    enabled: bool
+    fontScale: float
+    fontColor: str
+    fontThickness: float
+  doods.detectors:
+  - name: str
+    type: str
+    modelFile: str
+    labelFile: str?
+    hwAccel: bool?
+ports:
+  8080/tcp: 8080
+ports_description:
+  8080/tcp: DOODS2 port
+image: dkadyshev/doods2-{arch}
