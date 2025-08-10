@@ -1,0 +1,3 @@
+[submodule "voltronic"]
+	path = voltronic
+	url = https://github.com/DmitryKadyshev/hassio-addons-voltronic.git
