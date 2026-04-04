@@ -1,5 +1,5 @@
 name: Jackett
-version: "v0.22.1675"
+version: "v0.24.1537"
 slug: hassio_jackett
 description: An addon to add jackett to hassio
 startup: application
