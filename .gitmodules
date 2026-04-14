@@ -1,3 +1,6 @@
 [submodule "voltronic"]
 	path = voltronic
 	url = https://github.com/DmitryKadyshev/hassio-addons-voltronic.git
+[submodule "ntfy"]
+	path = ntfy
+	url = https://github.com/DmitryKadyshev/ntfy-hassio-addon.git
