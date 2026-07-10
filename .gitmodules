@@ -7,3 +7,6 @@
 [submodule "hassio-addons-prowlarr"]
 	path = hassio-addons-prowlarr
 	url = https://github.com/DmitryKadyshev/hassio-addons-prowlarr.git
+[submodule "hassio-addons-radarr"]
+	path = hassio-addons-radarr
+	url = https://github.com/DmitryKadyshev/hassio-addons-radarr.git
