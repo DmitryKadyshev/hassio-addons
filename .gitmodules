@@ -4,3 +4,6 @@
 [submodule "ntfy"]
 	path = ntfy
 	url = https://github.com/DmitryKadyshev/ntfy-hassio-addon.git
+[submodule "hassio-addons-prowlarr"]
+	path = hassio-addons-prowlarr
+	url = https://github.com/DmitryKadyshev/hassio-addons-prowlarr.git
