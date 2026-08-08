@@ -10,3 +10,6 @@
 [submodule "hassio-addons-sonarr"]
 	path = hassio-addons-sonarr
 	url = https://github.com/DmitryKadyshev/hassio-addons-sonarr.git
+[submodule "voltronic"]
+	path = voltronic
+	url = https://github.com/DmitryKadyshev/hassio-addons-voltronic.git
