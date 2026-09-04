@@ -13,9 +13,9 @@
 [submodule "voltronic"]
 	path = voltronic
 	url = https://github.com/DmitryKadyshev/hassio-addons-voltronic.git
-[submodule "doods2"]
-	path = doods2
+[submodule "hassio-addons-doods2"]
+	path = hassio-addons-doods2
 	url = https://github.com/DmitryKadyshev/hassio-addons-doods2.git
-[submodule "jakett"]
-	path = jakett
+[submodule "hassio-addons-jackett"]
+	path = hassio-addons-jackett
 	url = https://github.com/DmitryKadyshev/hassio-addons-jackett.git
