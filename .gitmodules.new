@@ -1,3 +1,0 @@
-[submodule "hassio-addons-ntfy"]
-	path = hassio-addons-ntfy
-	url = https://github.com/DmitryKadyshev/ntfy-hassio-addon.git
