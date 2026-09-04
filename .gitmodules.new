@@ -1,21 +1,3 @@
 [submodule "hassio-addons-ntfy"]
 	path = hassio-addons-ntfy
 	url = https://github.com/DmitryKadyshev/ntfy-hassio-addon.git
-[submodule "hassio-addons-prowlarr"]
-	path = hassio-addons-prowlarr
-	url = https://github.com/DmitryKadyshev/hassio-addons-prowlarr.git
-[submodule "hassio-addons-radarr"]
-	path = hassio-addons-radarr
-	url = https://github.com/DmitryKadyshev/hassio-addons-radarr.git
-[submodule "hassio-addons-sonarr"]
-	path = hassio-addons-sonarr
-	url = https://github.com/DmitryKadyshev/hassio-addons-sonarr.git
-[submodule "hassio-addons-voltronic"]
-	path = hassio-addons-voltronic
-	url = https://github.com/DmitryKadyshev/hassio-addons-voltronic.git
-[submodule "hassio-addons-doods2"]
-	path = hassio-addons-doods2
-	url = https://github.com/DmitryKadyshev/hassio-addons-doods2.git
-[submodule "hassio-addons-jackett"]
-	path = hassio-addons-jackett
-	url = https://github.com/DmitryKadyshev/hassio-addons-jackett.git
