@@ -19,3 +19,6 @@
 [submodule "hassio-addons-jackett"]
 	path = hassio-addons-jackett
 	url = https://github.com/DmitryKadyshev/hassio-addons-jackett.git
+[submodule "hassio-addons-openclaw"]
+	path = hassio-addons-openclaw
+	url = https://github.com/DmitryKadyshev/hassio-addons-openclaw.git
